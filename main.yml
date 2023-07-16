@@ -1,0 +1,9 @@
+
+- name: "Kali attackbox"
+  hosts: 192.168.1.240
+  connection: local
+  roles:
+    - role: "roles/configure-tmux"
+#    - role: "roles/configure-terminal"
+#    - role: "roles/configure-obsidian"
+#    - role: "roles/configure-shell"
