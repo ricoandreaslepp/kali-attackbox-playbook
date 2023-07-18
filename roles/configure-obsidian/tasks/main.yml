@@ -1,12 +1,22 @@
 ---
 # tasks file for configure-obsidian
-- name: "Download the deb Obsidian package"
-  get_url:
-    url = "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.3.5/obsidian_1.3.5_amd64.deb"
-    dest = "{{ role_path }}/files/obsidian.deb"
-- name: "Install the package"
-  dpkg_selections:
-    name: obsidian
-    selection: deinstall
+- name: "Check if Obsidian is installed"
+  command: dpkg-query -W obsidian
+  register: obsidian_check_deb
+  failed_when: obsidian_check_deb.rc > 1
+  changed_when: obsidian_check_deb.rc == 1
+- name: "Download and install Obsidian"
+  apt:
+    deb: "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.3.5/obsidian_1.3.5_amd64.deb"
+    state: present
   become: true
   become_method: sudo
+  when: obsidian_check_deb.rc != 1
+# TODO: configure uninstalling
+# - name: "Uninstall Obsidian"
+#   apt:
+#     name: obsidian
+#     state: absent
+#   become: true
+#   become_method: sudo
+#   when: uninstall_obsidian == 1

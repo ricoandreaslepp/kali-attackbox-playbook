@@ -1,10 +1,8 @@
-
 - name: "Kali attackbox"
-  #hosts: '{{ target | default("localhost") }}'
   hosts: latitude
-  #connection: local
+  #hosts: '{{ latitude | default("localhost") }}'
   roles:
     - role: "roles/configure-tmux"
+    - role: "roles/configure-obsidian"
 #    - role: "roles/configure-terminal"
-#    - role: "roles/configure-obsidian"
 #    - role: "roles/configure-shell"
