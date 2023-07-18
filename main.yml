@@ -4,5 +4,5 @@
   roles:
     - role: "roles/configure-tmux"
     - role: "roles/configure-obsidian"
-#    - role: "roles/configure-terminal"
+    - role: "roles/configure-terminal"
 #    - role: "roles/configure-shell"
