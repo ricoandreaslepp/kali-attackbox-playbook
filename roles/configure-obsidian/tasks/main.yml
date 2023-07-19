@@ -12,11 +12,3 @@
   become: true
   become_method: sudo
   when: obsidian_check_deb.rc == 1
-# TODO: configure uninstalling
-# - name: "Uninstall Obsidian"
-#   apt:
-#     name: obsidian
-#     state: absent
-#   become: true
-#   become_method: sudo
-#   when: uninstall_obsidian == 1
