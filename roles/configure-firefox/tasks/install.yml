@@ -1,0 +1,3 @@
+---
+# install file for configure-firefox
+- name: "Install uBlock Origin addon"

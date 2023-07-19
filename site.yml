@@ -8,4 +8,5 @@
     - role: "roles/configure-obsidian"
     - role: "roles/configure-terminal"
     - role: "roles/configure-structure"
+    - role: "roles/configure-firefox"
 #    - role: "roles/configure-shell"

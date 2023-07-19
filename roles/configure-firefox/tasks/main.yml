@@ -1,0 +1,5 @@
+---
+# tasks file for configure-firefox
+- name: "Configure firefox"
+  include_tasks: "{{ hostvars }}.yml"
+  when: hostvars is defined
