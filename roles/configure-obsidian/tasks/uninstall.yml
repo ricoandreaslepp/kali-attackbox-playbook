@@ -1,8 +1,9 @@
 ---
-# cleanup file for configure-obsidian
+# uninstall file for configure-obsidian
 - name: "Uninstall Obsidian"
   apt:
     name: obsidian
     state: absent
+    purge: true
   become: true
   become_method: sudo

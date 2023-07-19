@@ -2,4 +2,4 @@
 # vars file for configure-obsidian
 urls:
   deb:
-    obsidian_deb_url: "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.3.5/obsidian_1.3.5_amd64.deb"
+    obsidian: "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.3.5/obsidian_1.3.5_amd64.deb"

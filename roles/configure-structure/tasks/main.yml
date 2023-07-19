@@ -1,9 +1,5 @@
 ---
 # tasks file for configure-structure
-- name: "Create directories"
-  file:
-    path: "{{ item }}"
-    state: directory
-  loop:
-    - "{{ ansible_env.HOME }}/ecsc"
-    - "{{ ansible_env.HOME }}/tools"
+- name: "Configure directories"
+  include_tasks: "{{ hostvar }}.yml"
+  when: hostvar is defined

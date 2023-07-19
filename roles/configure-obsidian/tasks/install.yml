@@ -7,7 +7,7 @@
   changed_when: obsidian_check_deb.rc == 1
 - name: "Download and install Obsidian"
   apt:
-    deb: "{{ obsidian_deb_url }}"
+    deb: "{{ urls.deb.obsidian }}"
     state: present
   become: true
   become_method: sudo

@@ -1,14 +1,5 @@
 ---
-# tasks file for configure-obsidian
-- name: "Check if Obsidian is installed"
-  command: dpkg-query -W obsidian
-  register: obsidian_check_deb
-  failed_when: obsidian_check_deb.rc > 1
-  changed_when: obsidian_check_deb.rc == 1
-- name: "Download and install Obsidian"
-  apt:
-    deb: "{{ obsidian_deb_url }}"
-    state: present
-  become: true
-  become_method: sudo
-  when: obsidian_check_deb.rc == 1
+# main file for configure-obsidian
+- name: "Configure Obsidian"
+  include_tasks: "{{ hostvar }}.yml"
+  when: hostvar is defined
