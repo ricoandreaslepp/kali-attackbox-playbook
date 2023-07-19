@@ -1,0 +1,9 @@
+---
+# uninstall file for configure-tmux
+- name: "Uninstall tmux"
+  apt:
+    name: obsidian
+    state: absent
+    purge: true
+  become: true
+  become_method: sudo

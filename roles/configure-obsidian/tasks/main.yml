@@ -1,5 +1,5 @@
 ---
-# main file for configure-obsidian
+# tasks file for configure-obsidian
 - name: "Configure Obsidian"
   include_tasks: "{{ hostvar }}.yml"
   when: hostvar is defined

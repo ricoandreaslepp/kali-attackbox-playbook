@@ -1,13 +1,5 @@
 ---
 # tasks file for configure-tmux
-- name: "Install tmux"
-  apt:
-    name: tmux
-    state: present
-  become: true
-  become_method: sudo
-- name: "Copy tmux config"
-  copy:
-    src: "{{ role_path }}/files/.tmux.conf"
-    dest: "{{ ansible_env.HOME }}/.tmux.conf"
-
+- name: "Configure tmux"
+  include_tasks: "{{ hostvar }}.yml"
+  when: hostvar is defined

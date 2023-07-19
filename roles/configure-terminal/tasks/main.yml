@@ -1,6 +1,5 @@
 ---
 # tasks file for configure-terminal
-- name: "Copy zshrc"
-  copy:
-    src: "{{ role_path }}/files/.zshrc"
-    dest: "{{ ansible_env.HOME }}"
+- name: "Configure zsh terminal"
+  include_tasks: "{{ hostvar }}.yml"
+  when: hostvar is defined

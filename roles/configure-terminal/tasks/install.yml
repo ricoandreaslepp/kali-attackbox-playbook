@@ -1,0 +1,6 @@
+---
+# install file for configure-terminal
+- name: "Copy .zshrc config file"
+  copy:
+    src: "{{ role_path }}/files/.zshrc"
+    dest: "{{ ansible_env.HOME }}"
