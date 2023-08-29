@@ -1,7 +1,7 @@
 ---
-# playbook file
+# master playbook file
 - name: "Kali attackbox"
-  hosts: latitude
+  hosts: localhost
   #hosts: '{{ latitude | default("localhost") }}'
   roles:
 #    - role: "roles/configure-tmux"
