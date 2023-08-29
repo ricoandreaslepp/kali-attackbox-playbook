@@ -1,6 +1,8 @@
 ---
 # install file for configure-terminal
-- name: "Copy .zshrc config file"
-  copy:
+- name: "Keep old .zshrc file as backup"
+
+- name: "Copy new .zshrc config file"
+  ansible.builtin.copy
     src: "{{ role_path }}/files/.zshrc"
     dest: "{{ ansible_env.HOME }}"
