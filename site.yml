@@ -2,7 +2,7 @@
 # master playbook file
 - name: "Kali attackbox"
   hosts: localhost
-  #hosts: '{{ latitude | default("localhost") }}'
+  #hosts: '{{ latitude | default("") }}'
   roles:
 #    - role: "roles/configure-tmux"
 #    - role: "roles/configure-obsidian"

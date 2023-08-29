@@ -1,6 +1,5 @@
 ---
 # tasks file for configure-shell
-- name: "Copy .zshrc file"
-  ansible.builtin.copy:
-    src: "{{ role_path }}/files/.zshrc"
-    dest: "{{ ansible_env.HOME }}/.zshrc"
+- name: "Configure zsh shell"
+  include_tasks: "{{ hostvar }}.yml"
+  when: hostvar is defined

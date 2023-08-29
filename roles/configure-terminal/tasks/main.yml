@@ -1,5 +1,0 @@
----
-# tasks file for configure-terminal
-- name: "Configure zsh terminal"
-  include_tasks: "{{ hostvar }}.yml"
-  when: hostvar is defined

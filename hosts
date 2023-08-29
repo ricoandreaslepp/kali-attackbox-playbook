@@ -1,3 +1,6 @@
+[localhost]
+hostvar=install
+
 [latitude]
 192.168.1.240
 
