@@ -244,6 +244,9 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+alias gst='git status'
+alias gca='git commit --all'
+alias gp='git push'
 
 # user defined aliases
 alias tools='cd ~/tools && ls'
