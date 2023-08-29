@@ -247,6 +247,7 @@ alias l='ls -CF'
 alias gst='git status'
 alias gca='git commit --all'
 alias gp='git push'
+alias gd='git diff'
 
 # user defined aliases
 alias tools='cd ~/tools && ls'
