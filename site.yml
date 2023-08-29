@@ -4,9 +4,9 @@
   hosts: latitude
   #hosts: '{{ latitude | default("localhost") }}'
   roles:
-    - role: "roles/configure-tmux"
-    - role: "roles/configure-obsidian"
+#    - role: "roles/configure-tmux"
+#    - role: "roles/configure-obsidian"
     - role: "roles/configure-terminal"
-    - role: "roles/configure-structure"
-    - role: "roles/configure-firefox"
+#    - role: "roles/configure-structure"
+#    - role: "roles/configure-firefox"
 #    - role: "roles/configure-shell"
