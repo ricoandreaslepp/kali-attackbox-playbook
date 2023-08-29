@@ -1,6 +1,6 @@
 ---
 # tasks file for configure-shell
 - name: "Copy .zshrc file"
-  ansible.builtin.copy
+  ansible.builtin.copy:
     src: "{{ role_path }}/files/.zshrc"
     dest: "{{ ansible_env.HOME }}/.zshrc"
