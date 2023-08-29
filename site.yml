@@ -2,11 +2,12 @@
 # master playbook file
 - name: "Kali attackbox"
   hosts: localhost
-  #hosts: '{{ latitude | default("") }}'
+  vars:
+    hostvar: install
+  connection: local 
   roles:
 #    - role: "roles/configure-tmux"
 #    - role: "roles/configure-obsidian"
-    - role: "roles/configure-terminal"
+    - role: "roles/configure-shell"
 #    - role: "roles/configure-structure"
 #    - role: "roles/configure-firefox"
-#    - role: "roles/configure-shell"

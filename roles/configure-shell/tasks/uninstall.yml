@@ -1,0 +1,6 @@
+---
+# uninstall file for configure-terminal
+- name: "Replace new with the original .zshrc file"
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/.zshrc.original"
+    dest: "{{ ansible_env.HOME }}/.zshrc"
