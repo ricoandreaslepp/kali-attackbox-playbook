@@ -5,5 +5,8 @@
     path: "{{ item }}"
     state: directory
   loop:
-    - "{{ ansible_env.HOME }}/ecsc"
+    - "{{ ansible_env.HOME }}/thm"
+    - "{{ ansible_env.HOME }}/thm/vpn"
+    - "{{ ansible_env.HOME }}/htb"
+    - "{{ ansible_env.HOME }}/htb/vpn"
     - "{{ ansible_env.HOME }}/tools"

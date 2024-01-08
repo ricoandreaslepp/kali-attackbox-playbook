@@ -6,8 +6,8 @@
     hostvar: install
   connection: local 
   roles:
-#    - role: "roles/configure-tmux"
-#    - role: "roles/configure-obsidian"
+    - role: "roles/configure-tmux"
+    - role: "roles/configure-obsidian"
     - role: "roles/configure-shell"
-#    - role: "roles/configure-structure"
+    - role: "roles/configure-structure"
 #    - role: "roles/configure-firefox"
