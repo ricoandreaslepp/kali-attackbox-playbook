@@ -250,8 +250,9 @@ alias gp='git push'
 alias gd='git diff'
 
 # user defined aliases
-alias tools='cd ~/tools && ls'
-alias something='echo "it worked!"'
+alias tools='cd ~/tools'
+alias htb='cd ~/htb'
+alias thm='cd ~/thm'
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
