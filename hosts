@@ -1,5 +1,0 @@
-[latitude]
-192.168.1.240
-
-[latitude:vars]
-ansible_user=snyder
