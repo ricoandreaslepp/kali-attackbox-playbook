@@ -1,10 +1,9 @@
 ---
 # master playbook file
 - name: "Kali attackbox"
-  hosts: localhost
+  hosts: all
   vars:
     hostvar: install
-  connection: local 
   roles:
     - role: "roles/configure-tmux"
     - role: "roles/configure-obsidian"
