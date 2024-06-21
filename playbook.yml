@@ -1,12 +1,14 @@
 ---
 # master playbook file
-- name: "Kali attackbox"
-  hosts: all
+- hosts: all
+  user: kali
+  become: yes
+  become_user: root
   vars:
     hostvar: install
   roles:
-    - role: "roles/configure-tmux"
-    - role: "roles/configure-obsidian"
-    - role: "roles/configure-shell"
-    - role: "roles/configure-structure"
-#    - role: "roles/configure-firefox"
+    - { role: tmux, tags: tmux }
+    - { role: zsh, tags: zsh }
+    - { role: firefox, tags: firefox }
+    - { role: obisidian, tags: obsidian }
+    - { role: structure, tags: struture }
