@@ -1,0 +1,6 @@
+---
+- name: Allow kali to run sudo without passwd
+  ansible.builtin.user:
+    name: kali
+    groups: kali-trusted
+    append: yes

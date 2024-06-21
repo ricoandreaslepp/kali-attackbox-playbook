@@ -7,6 +7,7 @@
   vars:
     hostvar: install
   roles:
+    - { role: metadata, tags: always }
     - { role: tmux, tags: tmux }
     - { role: zsh, tags: zsh }
     - { role: firefox, tags: firefox }
